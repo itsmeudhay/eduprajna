@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Slides } from "./data";
+import LeftArrow from "/src/assets/icons/left-arrow.png";
+import RightArrow from "/src/assets/icons/right-arrow.png";
 
 function ImageSlider() {
  const [currentSlide, setCurrentSlide] = useState(0);
@@ -57,7 +59,7 @@ function ImageSlider() {
           onClick={handlePrevSlide}
           className="flex items-center px-2 py-1 rounded-md text-white hover:bg-gray-700"
         >
-          <img src="/src/assets/icons/left-arrow.png" className="h-4 w-4" />
+          <img src={LeftArrow} className="h-4 w-4" />
           Previous
         </button>
         <div className="flex flex-wrap gap-2">
@@ -76,7 +78,7 @@ function ImageSlider() {
           className="flex items-center px-2 py-1 rounded-md text-white hover:bg-gray-700"
         >
           Next
-          <img src="/src/assets/icons/right-arrow.png" className="h-4 w-4" />
+          <img src={RightArrow} className="h-4 w-4" />
         </button>
       </div>
       <button
